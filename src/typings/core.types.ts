@@ -87,3 +87,33 @@ export interface IAssetReleaseDetails {
     zipball_url: string;
     body: string;
 }
+
+
+
+// errors
+export interface HttpError extends Error {
+    status: number;
+    headers: Record<string, string>;
+    request: {
+        method: string;
+        url: string;
+        headers: Record<string, string>;
+        body?: string | Buffer;
+    };
+    response: {
+        url: string;
+        status: number;
+        headers: Record<string, string>;
+        data: {
+            message: string;
+            documentation_url?: string;
+            request_id?: string;
+            errors?: Array<{
+                resource: string;
+                field: string;
+                code: string;
+                message?: string;
+            }>;
+        };
+    };
+}

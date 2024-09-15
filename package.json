@@ -7,12 +7,16 @@
         "start": "ts-node src"
     },
     "dependencies": {
+        "@octokit/request-error": "^6.1.4",
         "@octokit/rest": "^19.0.7",
+        "axios": "^1.7.7",
+        "cli-progress": "^3.12.0",
         "dotenv": "^16.0.3",
         "mime-types": "^2.1.35",
         "request": "^2.88.2"
     },
     "devDependencies": {
+        "@types/cli-progress": "^3.11.6",
         "@types/mime-types": "^2.1.1",
         "@types/node": "^18.15.11",
         "ts-node": "^10.9.1",
